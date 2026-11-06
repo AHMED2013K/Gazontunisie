@@ -144,12 +144,12 @@ function renderFooter(lang) {
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" /></svg>
             </a>
             <div class="social-links" aria-label="${f.followHeading}">
-              <a href="${SITE.social.instagram}" target="_blank" rel="noreferrer" aria-label="Instagram">
+              ${SITE.social.instagram ? `<a href="${SITE.social.instagram}" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-.7a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z" /></svg>
-              </a>
-              <a href="${SITE.social.facebook}" target="_blank" rel="noreferrer" aria-label="Facebook">
+              </a>` : ""}
+              ${SITE.social.facebook && SITE.social.facebook !== "https://www.facebook.com/" ? `<a href="${SITE.social.facebook}" target="_blank" rel="noreferrer" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V3h-3c-4 0-6 2.4-6 6v3H5v5h3v5h5v-5h4l1-5h-5V9c0-.7.4-1 1-1Z" /></svg>
-              </a>
+              </a>` : ""}
               <a href="${buildWhatsAppUrl(t.footerWhatsappMessage || t.stickyWhatsappMessage)}" target="_blank" rel="noreferrer" aria-label="WhatsApp Gazon Tunisie">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.4 1.3-2 1.4-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6l1 2.4c.1.3.1.5 0 .7l-.5.8c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.5-.3.8-.2l2.4 1.1c.3.2.6.3.7.5.1.1.1.8-.1 1.3Z" /></svg>
               </a>

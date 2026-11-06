@@ -5,7 +5,7 @@
 // Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
 // contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
-const ASSET_VERSION = "19";
+const ASSET_VERSION = "20";
 
 // Le tarif du gazon vient de src/data/pricing.js, source unique de vérité :
 // aucun prix de gazon ne doit être écrit en dur ailleurs.
@@ -20,7 +20,7 @@ const SITE = {
   name: "Gazon Tunisie",
   assetVersion: ASSET_VERSION,
   legalName: "Gazon Tunisie",
-  domain: "https://gazontunisie.tn",
+  domain: "https://gazontunisie.shop",
   defaultLocale: "fr_TN",
   language: "fr",
   country: "Tunisie",
@@ -56,7 +56,7 @@ const SITE = {
   },
 
   social: {
-    instagram: "https://www.instagram.com/gazontunisie.tn/",
+    instagram: "",
     facebook: "https://www.facebook.com/",
     whatsapp: "https://wa.me/21658233020",
     googleMaps:

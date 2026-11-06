@@ -14,7 +14,7 @@ votre fiche avec le site officiel.
   si vous n'avez pas de vitrine ouverte au public, et ajouter le Grand Tunis,
   Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet comme zones desservies)
 - **Téléphone** : +216 58 233 020
-- **Site web** : https://gazontunisie.tn
+- **Site web** : https://gazontunisie.shop
 - **Horaires** : Tous les jours, 8h–19h
 
 ## Description (750 caractères max)
