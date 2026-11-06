@@ -7,6 +7,7 @@
     "dev": "python3 -m http.server 4173",
     "start": "python3 -m http.server 4173",
     "build": "node scripts/build.js",
+    "deploy": "npm run build && npm run verify",
     "verify": "node scripts/verify.js",
     "test:pricing": "node scripts/test-pricing.js",
     "test": "npm run build && npm run verify && npm run test:pricing && npm run test:quote",
