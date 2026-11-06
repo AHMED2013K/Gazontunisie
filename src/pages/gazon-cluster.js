@@ -205,6 +205,26 @@ function pillarPage(lang) {
     },
   };
   const t = T[lang];
+  const orderText = {
+    fr: {
+      h2: "Choisissez votre formule de commande",
+      paragraphs: ["Vous pouvez choisir le gazon avec livraison seulement, le gazon avec livraison et pose, ou récupérer votre gazon auprès de notre emplacement à Grombalia, Nabeul.", "Pour passer commande, envoyez-nous un message sur WhatsApp. L'un de nos conseillers vous accompagne dans le choix selon votre projet et votre besoin. Une avance est demandée lors de la confirmation de la commande ; le solde est payé à la livraison ou après la pose, selon la formule choisie."],
+      listH2: "Les étapes de la commande",
+      list: ["Envoyer votre ville, votre surface et votre besoin sur WhatsApp", "Choisir entre retrait à Grombalia, livraison seule ou livraison avec pose", "Régler l'avance au moment de confirmer la commande", "Payer le reste lors de la livraison ou après la pose"],
+    },
+    en: {
+      h2: "Choose your order option",
+      paragraphs: ["You can choose lawn with delivery only, lawn with delivery and installation, or collect your lawn from our location in Grombalia, Nabeul.", "To order, send us a WhatsApp message. One of our advisers will guide you according to your project and needs. A deposit is paid when the order is confirmed; the balance is paid on delivery or after installation, depending on the selected option."],
+      listH2: "Order steps",
+      list: ["Send your city, area and needs on WhatsApp", "Choose collection in Grombalia, delivery only or delivery with installation", "Pay the deposit when confirming the order", "Pay the balance on delivery or after installation"],
+    },
+    ar: {
+      h2: "اختاروا طريقة طلبكم",
+      paragraphs: ["يمكنكم اختيار العشب مع التوصيل فقط، أو العشب مع التوصيل والتركيب، أو استلام العشب من موقعنا في قرمبالية، نابل.", "للطلب، أرسلوا لنا رسالة عبر واتساب. يرافقكم أحد مستشارينا في الاختيار حسب مشروعكم وحاجتكم. يتم دفع عربون عند تأكيد الطلب، ثم دفع الباقي عند التوصيل أو بعد التركيب حسب الصيغة المختارة."],
+      listH2: "مراحل الطلب",
+      list: ["أرسلوا مدينتكم ومساحتكم وحاجتكم عبر واتساب", "اختاروا الاستلام من قرمبالية أو التوصيل فقط أو التوصيل مع التركيب", "ادفعوا العربون عند تأكيد الطلب", "ادفعوا الباقي عند التوصيل أو بعد التركيب"],
+    },
+  }[lang];
   return renderContentPage({
     basePath: "/gazon-tunisie/",
     lang,
@@ -230,6 +250,8 @@ function pillarPage(lang) {
       { type: "list", h2: t.h2b, items: t.listB },
       { type: "text", h2: t.h2types, paragraphs: t.pTypes },
       { type: "quote", h2: t.quoteH2, intro: t.quoteIntro, config: quoteConfig(lang) },
+      { type: "text", h2: orderText.h2, paragraphs: orderText.paragraphs },
+      { type: "list", h2: orderText.listH2, items: orderText.list, ordered: true },
       { type: "table", h2: t.h2c, headers: t.headersC, rows: t.rowsC },
       { type: "cta", ...gazonCta(lang) },
       { type: "related", ...relatedCluster(lang) },

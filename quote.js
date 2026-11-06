@@ -33,6 +33,8 @@
     var epaisseur = form.elements.terre.value;
     var typeSelect = form.elements.type;
     var typeLabel = typeSelect.options[typeSelect.selectedIndex].text;
+    var serviceSelect = form.elements.service;
+    var serviceLabel = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].text : "";
 
     /* Toute surface est commandable : sous 50 m2 le tarif est simplement
        different (voir le tableau des tarifs sur la page). Le formulaire ne
@@ -46,6 +48,7 @@
       fill(epaisseur ? L.message : L.messageNoTerre, {
         surface: brut,
         type: typeLabel,
+        service: serviceLabel,
         terre: epaisseur
       })
     );

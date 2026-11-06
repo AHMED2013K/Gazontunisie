@@ -5,7 +5,7 @@
 // Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
 // contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
-const ASSET_VERSION = "21";
+const ASSET_VERSION = "22";
 
 // Le tarif du gazon vient de src/data/pricing.js, source unique de vérité :
 // aucun prix de gazon ne doit être écrit en dur ailleurs.

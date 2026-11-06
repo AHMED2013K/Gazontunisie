@@ -152,6 +152,12 @@ function renderQuote({ h2, intro, config }) {
             ${config.types.map((t) => `<option value="${t.key}">${t.label}</option>`).join("")}
           </select>
         </label>
+          <label class="quote-field">
+            <span>${config.labels.service}</span>
+            <select name="service">
+              ${config.services.map((s) => `<option value="${s.key}">${s.label}</option>`).join("")}
+            </select>
+          </label>
         <label class="quote-field">
           <span>${config.labels.terre}</span>
           <select name="terre">
