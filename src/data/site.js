@@ -5,7 +5,7 @@
 // Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
 // contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
-const ASSET_VERSION = "20";
+const ASSET_VERSION = "21";
 
 // Le tarif du gazon vient de src/data/pricing.js, source unique de vérité :
 // aucun prix de gazon ne doit être écrit en dur ailleurs.
@@ -64,7 +64,7 @@ const SITE = {
   },
 
   logo: "/logo.png",
-  defaultOgImage: "/paspalum-04.jpeg",
+  defaultOgImage: "/photo-principale.png",
 
   products: {
     gazon: {
