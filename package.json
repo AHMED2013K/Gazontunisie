@@ -1,0 +1,19 @@
+{
+  "name": "gazon-tunisie",
+  "version": "1.0.0",
+  "description": "Site vitrine SEO de Gazon Tunisie : gazon, plantation, livraison et devis en Tunisie.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "start": "python3 -m http.server 4173",
+    "build": "node scripts/build.js",
+    "verify": "node scripts/verify.js",
+    "test:pricing": "node scripts/test-pricing.js",
+    "test": "npm run build && npm run verify && npm run test:pricing && npm run test:quote",
+    "test:quote": "node scripts/test-quote.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
