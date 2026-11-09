@@ -110,6 +110,14 @@ const SITE = {
     },
   },
 
+  inventory: {
+    lastUpdated: "09/11/2026",
+    paspalum: { available: true, fr: "Gazon Paspalum", en: "Paspalum lawn", ar: "عشب باسبالوم" },
+    americain: { available: true, fr: "Gazon américain", en: "American lawn", ar: "العشب الأمريكي" },
+    terre: { available: false, fr: "Terre végétale", en: "Topsoil", ar: "التربة الزراعية" },
+    palmier: { available: true, fr: "Palmier", en: "Palm tree", ar: "نخيل" },
+  },
+
   credit: {
     label: "DCB Authority Group",
     url: "https://dcbag.net/",

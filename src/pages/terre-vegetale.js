@@ -41,11 +41,11 @@ function packRows(lang) {
 const TEXT = {
   fr: {
     title: "Terre végétale en pack avec gazon | Gazon Tunisie",
-    metaDescription: "La terre végétale Gazon Tunisie s'achète en pack avec votre gazon naturel, à 100 DT/m³. Packs 10, 15 ou 20 cm pour 50 m² de gazon, livrés en Tunisie.",
+    metaDescription: "La terre végétale Gazon Tunisie est actuellement hors stock. Consultez les packs 10, 15 ou 20 cm et contactez-nous pour être informé du retour.",
     eyebrow: "Terre végétale",
     h1: "Terre végétale : en pack avec votre gazon naturel",
     heroAlt: "terre végétale livrée avec du gazon naturel en Tunisie",
-    intro: "La terre végétale Gazon Tunisie n'est pas vendue seule : elle accompagne une commande de gazon naturel, pour préparer le sol avant la pose. Elle est facturée 100 DT le mètre cube (m³), et les frais de livraison sont calculés selon votre adresse puis communiqués avant confirmation de commande.",
+    intro: "La terre végétale Gazon Tunisie est actuellement hors stock. Cette page présente les packs prévus avec une commande de gazon naturel afin de préparer votre sol ; contactez-nous pour être informé dès le réapprovisionnement.",
     breadcrumbLabel: "Terre végétale",
     packH2: "Nos packs terre végétale + gazon naturel",
     packIntro: `Les packs de référence ci-dessous couvrent ${PACK_BASE_SURFACE} m² de gazon naturel. Le volume de terre dépend de l'épaisseur que vous souhaitez apporter :`,
@@ -65,10 +65,10 @@ const TEXT = {
     deliveryPa: [
       "Les packs sont livrables partout en Tunisie — Grand Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet et autres régions. Le tarif de livraison est calculé selon la distance depuis notre dépôt de Nabeul et le volume commandé, puis communiqué avant confirmation de commande.",
     ],
-    ctaHeading: "Demandez votre pack terre végétale + gazon",
-    ctaText: "Indiquez-nous la surface de gazon et l'épaisseur de terre souhaitée : nous calculons votre devis complet.",
-    ctaButton: "Demander mon devis",
-    ctaMessage: "Bonjour, je souhaite un pack gazon naturel + terre végétale. Voici ma surface et l'épaisseur souhaitée : ",
+    ctaHeading: "Être informé du retour en stock",
+    ctaText: "La terre végétale est momentanément indisponible. Envoyez-nous votre ville et votre projet pour être informé du réapprovisionnement.",
+    ctaButton: "Être informé sur WhatsApp",
+    ctaMessage: "Bonjour, je souhaite être informé du retour en stock de la terre végétale. Voici ma ville et mon projet : ",
     ctaSecondary: "Voir le gazon naturel",
     faqH2: "Questions fréquentes sur la terre végétale",
     faq: [
@@ -81,11 +81,11 @@ const TEXT = {
   },
   en: {
     title: "Topsoil in a Pack with Lawn | Gazon Tunisie Tunisia",
-    metaDescription: "Gazon Tunisie topsoil comes as a pack with your natural lawn, at 100 DT/m³. Packs of 10, 15 or 20 cm for 50 sqm of lawn, delivered across Tunisia.",
+    metaDescription: "Gazon Tunisie topsoil is currently out of stock. See the 10, 15 and 20 cm pack information and contact us about restocking.",
     eyebrow: "Topsoil",
     h1: "Topsoil: in a pack with your natural lawn",
     heroAlt: "topsoil delivered with natural lawn in Tunisia",
-    intro: "Gazon Tunisie topsoil is not sold on its own: it comes with a natural lawn order, to prepare the ground before laying. It is charged at 100 DT per cubic metre (m³), and delivery fees are calculated for your address and confirmed before you place your order.",
+    intro: "Gazon Tunisie topsoil is currently out of stock. This page presents the planned packs with a natural lawn order to prepare the ground; contact us to be notified when it is restocked.",
     breadcrumbLabel: "Topsoil",
     packH2: "Our topsoil + natural lawn packs",
     packIntro: `The reference packs below cover ${PACK_BASE_SURFACE} sqm of natural lawn. The soil volume depends on the depth you want to add:`,
@@ -105,10 +105,10 @@ const TEXT = {
     deliveryPa: [
       "Packs can be delivered anywhere in Tunisia — Greater Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabes, Hammamet and other regions. The delivery rate is based on the distance from our Nabeul depot and the volume ordered, and is given before you confirm your order.",
     ],
-    ctaHeading: "Request your topsoil + lawn pack",
-    ctaText: "Tell us your lawn area and the soil depth you want: we will work out your full quote.",
-    ctaButton: "Request my quote",
-    ctaMessage: "Hello, I would like a natural lawn + topsoil pack. Here is my area and the depth I want: ",
+    ctaHeading: "Get notified when topsoil is restocked",
+    ctaText: "Topsoil is temporarily unavailable. Send us your city and project to be notified when it returns.",
+    ctaButton: "Notify me on WhatsApp",
+    ctaMessage: "Hello, I would like to be notified when topsoil is restocked. Here is my city and project: ",
     ctaSecondary: "See natural lawn",
     faqH2: "Frequently asked questions about topsoil",
     faq: [

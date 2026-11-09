@@ -1,4 +1,4 @@
-const { buildWhatsAppUrl } = require("../data/site");
+const { SITE, buildWhatsAppUrl } = require("../data/site");
 const { sizeAttrs } = require("../data/image-size");
 
 function renderCta({ heading, text, buttonLabel, whatsappMessage, secondary }) {
@@ -130,6 +130,20 @@ function renderCards({ h2, intro, cards }) {
     </section>`;
 }
 
+function renderAvailability(keys, lang = "fr") {
+  const statusLabels = {
+    available: { fr: "Produit disponible", en: "Product available", ar: "المنتج متوفر" },
+    out: { fr: "Produit hors stock", en: "Out of stock", ar: "المنتج غير متوفر" },
+  };
+  const dateLabels = { fr: "Dernière mise à jour", en: "Last updated", ar: "آخر تحديث" };
+  return `<div class="availability-list" aria-label="Disponibilité des produits">${keys.map((key) => {
+    const item = SITE.inventory[key];
+    if (!item) return "";
+    const status = item.available ? statusLabels.available[lang] : statusLabels.out[lang];
+    return `<span class="availability-badge ${item.available ? "is-available" : "is-out-of-stock"}"><strong>${item[lang] || item.fr} : ${status}</strong><small>${dateLabels[lang]} : ${SITE.inventory.lastUpdated}</small></span>`;
+  }).join("")}</div>`;
+}
+
 // Formulaire de demande de devis. Il n'affiche AUCUN montant : le client fait
 // son propre calcul à partir des tarifs publiés sur la page, le formulaire ne
 // sert qu'à composer sa demande WhatsApp, que le vendeur chiffre ensuite.
@@ -197,4 +211,4 @@ function collectFaqItems(sections = []) {
   return sections.filter((s) => s.type === "faq").flatMap((s) => s.items);
 }
 
-module.exports = { renderSections, collectFaqItems, renderCards, renderCta, renderFaq };
+module.exports = { renderSections, collectFaqItems, renderCards, renderCta, renderFaq, renderAvailability };

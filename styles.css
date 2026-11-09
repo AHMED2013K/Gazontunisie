@@ -10,6 +10,17 @@
   --shadow: 0 24px 70px rgba(26, 51, 30, 0.12);
 }
 
+/* Disponibilité produit : information opérationnelle visible sans modifier
+   les données structurées Product. */
+.availability-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 14px; }
+.availability-badge { display: inline-flex; flex-direction: column; gap: 2px; padding: 7px 10px; border-radius: 8px; font-size: .72rem; line-height: 1.25; }
+.availability-badge strong { font-weight: 800; }
+.availability-badge small { font-size: .68rem; opacity: .78; }
+.availability-badge.is-available { color: #176b3a; background: #e7f6ec; border: 1px solid #b8e4c7; }
+.availability-badge.is-out-of-stock { color: #9b2424; background: #fff0f0; border: 1px solid #f0bcbc; }
+.premium-product-copy .availability-list { margin: 10px 0 12px; }
+.premium-product-copy .availability-badge { padding: 6px 8px; }
+
 * {
   box-sizing: border-box;
 }

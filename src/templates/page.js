@@ -1,6 +1,6 @@
 const { renderPage } = require("./layout");
 const { renderBreadcrumb } = require("./breadcrumb");
-const { renderSections, collectFaqItems } = require("./components");
+const { renderSections, collectFaqItems, renderAvailability } = require("./components");
 const { faqPage, product: productSchema, service: serviceSchema } = require("./schema");
 const { localizedPath } = require("../data/i18n");
 const { UI } = require("../data/ui-strings");
@@ -38,6 +38,14 @@ function normalizeLegacyPricing(value) {
 function renderContentPage(page) {
   page = normalizeLegacyPricing(page);
   const lang = page.lang || "fr";
+  if (!page.availability) {
+    const path = page.basePath || "";
+    if (path.includes("acheter-terre-vegetale")) page.availability = ["terre"];
+    else if (path.includes("palmier")) page.availability = ["palmier"];
+    else if (path.includes("gazon-paspalum")) page.availability = ["paspalum"];
+    else if (path.includes("gazon-americain")) page.availability = ["americain"];
+    else if (path.includes("gazon") || path.includes("difference-paspalum")) page.availability = ["paspalum", "americain"];
+  }
   const localizedBase = localizedPath(page.basePath, lang);
   const breadcrumbItems = [
     { label: UI[lang].breadcrumbHome, path: localizedPath("/", lang) },
@@ -60,6 +68,7 @@ function renderContentPage(page) {
         <p class="eyebrow">${page.eyebrow || ""}</p>
         <h1>${page.h1}</h1>
         <p class="hero-copy">${page.intro}</p>
+        ${page.availability && page.availability.length ? renderAvailability(page.availability, lang) : ""}
       </div>
       ${
         page.heroImage
