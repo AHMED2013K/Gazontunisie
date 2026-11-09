@@ -2,7 +2,7 @@ const { SITE, absoluteUrl, buildWhatsAppUrl } = require("../data/site");
 const { villes } = require("../data/villes");
 const { LANGUAGES, LANGUAGE_LIST, localizedPath } = require("../data/i18n");
 const { UI, CITY_NAMES } = require("../data/ui-strings");
-const { jsonLdScript, organization, localBusiness, website } = require("./schema");
+const { jsonLdScript, organization, localBusiness, website, webPage } = require("./schema");
 
 function getNav(lang) {
   const t = UI[lang];
@@ -223,7 +223,13 @@ function renderPage({
   const path = localizedPath(basePath, lang);
   const canonical = absoluteUrl(path);
   const image = absoluteUrl(ogImage || SITE.defaultOgImage);
-  const schemas = [organization(), localBusiness(), website(LANGUAGES[lang].locale.replace("_", "-")), ...jsonLd];
+  const schemas = [
+    organization(),
+    localBusiness(),
+    website(LANGUAGES[lang].locale.replace("_", "-")),
+    webPage({ path, name: title, description, lang: LANGUAGES[lang].locale.replace("_", "-") }),
+    ...jsonLd,
+  ];
 
   return `<!DOCTYPE html>
 <html lang="${langConfig.htmlLang}" dir="${langConfig.dir}">
@@ -232,6 +238,10 @@ function renderPage({
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title}</title>
     <meta name="description" content="${description}" />
+    <meta name="author" content="Gazon Tunisie" />
+    <meta name="theme-color" content="#173f35" />
+    <meta name="geo.region" content="TN-21" />
+    <meta name="geo.placename" content="Grombalia, Nabeul, Tunisie" />
     <meta name="robots" content="${robots}" />
     <link rel="canonical" href="${canonical}" />
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -245,11 +255,13 @@ function renderPage({
     <meta property="og:description" content="${description}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:image" content="${image}" />
+    <meta property="og:image:alt" content="${title}" />
     <meta property="og:locale" content="${langConfig.locale}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${description}" />
     <meta name="twitter:image" content="${image}" />
+    <meta name="twitter:image:alt" content="${title}" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

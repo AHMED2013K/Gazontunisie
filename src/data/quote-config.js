@@ -12,6 +12,8 @@ const { GAZON_TYPES, TERRE_PACKS } = require("./pricing");
 const LABELS = {
   fr: {
     surface: "Surface de gazon à couvrir (m²)",
+    city: "Ville de livraison",
+    cityPlaceholder: "Ex. Tunis, Nabeul, Sousse",
     type: "Type de gazon naturel",
     service: "Mode de commande",
     services: ["Gazon avec livraison seulement", "Gazon avec livraison et pose", "Retrait du gazon à Grombalia"],
@@ -21,16 +23,19 @@ const LABELS = {
     cta: "Envoyer ma demande sur WhatsApp",
     note: "Le prix et les frais de livraison vous sont communiqués par WhatsApp avant toute confirmation de commande.",
       fallbackMessage: "Bonjour Gazon Tunisie, je souhaite un devis pour du gazon naturel. Voici ma surface : ",
-    message: ({ surface, type, service, terre }) =>
+    message: ({ surface, city, type, service, terre }) =>
       `Bonjour Gazon Tunisie, je souhaite un devis.\n` +
       `• Gazon naturel : ${type}\n` +
       `• Surface : ${surface} m²\n` +
+      `• Ville de livraison : ${city}\n` +
       `• Mode choisi : ${service}\n` +
       (terre ? `• Terre végétale : ${terre} cm\n` : "") +
       `Pouvez-vous me communiquer le prix et les frais de livraison ?`,
   },
   en: {
     surface: "Lawn area to cover (sqm)",
+    city: "Delivery city",
+    cityPlaceholder: "Ex. Tunis, Nabeul, Sousse",
     type: "Type of natural lawn",
     service: "Order option",
     services: ["Lawn with delivery only", "Lawn with delivery and installation", "Collect the lawn in Grombalia"],
@@ -40,16 +45,19 @@ const LABELS = {
     cta: "Send my request on WhatsApp",
     note: "The price and delivery fees are confirmed on WhatsApp before you place your order.",
       fallbackMessage: "Hello Gazon Tunisie, I would like a quote for natural lawn. Here is my area: ",
-    message: ({ surface, type, service, terre }) =>
+    message: ({ surface, city, type, service, terre }) =>
       `Hello Gazon Tunisie, I would like a quote.\n` +
       `• Natural lawn: ${type}\n` +
       `• Area: ${surface} sqm\n` +
+      `• Delivery city: ${city}\n` +
       `• Selected option: ${service}\n` +
       (terre ? `• Topsoil: ${terre} cm\n` : "") +
       `Could you confirm the price and the delivery fees?`,
   },
   ar: {
     surface: "مساحة العشب المطلوب تغطيتها (م²)",
+    city: "مدينة التوصيل",
+    cityPlaceholder: "مثال: تونس، نابل، سوسة",
     type: "نوع العشب الطبيعي",
     service: "طريقة الطلب",
     services: ["عشب مع التوصيل فقط", "عشب مع التوصيل والتركيب", "استلام العشب من قرمبالية"],
@@ -59,10 +67,11 @@ const LABELS = {
     cta: "أرسلوا طلبي عبر واتساب",
     note: "يُبلَّغ السعر ومصاريف التوصيل عبر واتساب قبل تأكيد أي طلب.",
       fallbackMessage: "مرحباً Gazon Tunisie، أود عرض سعر لعشب طبيعي. إليكم مساحتي: ",
-    message: ({ surface, type, service, terre }) =>
+    message: ({ surface, city, type, service, terre }) =>
       `مرحباً، أود عرض سعر من Gazon Tunisie.\n` +
       `• عشب طبيعي: ${type}\n` +
       `• المساحة: ${surface} م²\n` +
+      `• مدينة التوصيل: ${city}\n` +
       `• طريقة الطلب: ${service}\n` +
       (terre ? `• تربة زراعية: ${terre} سم\n` : "") +
       `هل يمكنكم إبلاغي بالسعر ومصاريف التوصيل؟`,
@@ -84,6 +93,8 @@ function quoteConfig(lang) {
     })),
     labels: {
       surface: L.surface,
+      city: L.city,
+      cityPlaceholder: L.cityPlaceholder,
       type: L.type,
       service: L.service,
       terre: L.terre,
@@ -92,8 +103,8 @@ function quoteConfig(lang) {
       note: L.note,
       fallbackMessage: L.fallbackMessage,
       // Gabarits : {surface}, {type}, {terre}
-      message: L.message({ surface: "{surface}", type: "{type}", service: "{service}", terre: "{terre}" }),
-      messageNoTerre: L.message({ surface: "{surface}", type: "{type}", service: "{service}", terre: null }),
+      message: L.message({ surface: "{surface}", city: "{city}", type: "{type}", service: "{service}", terre: "{terre}" }),
+      messageNoTerre: L.message({ surface: "{surface}", city: "{city}", type: "{type}", service: "{service}", terre: null }),
     },
   };
 }

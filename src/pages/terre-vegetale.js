@@ -40,7 +40,7 @@ function packRows(lang) {
 
 const TEXT = {
   fr: {
-    title: "Terre Végétale en Pack avec Gazon | Gazon Tunisie Tunisie",
+    title: "Terre végétale en pack avec gazon | Gazon Tunisie",
     metaDescription: "La terre végétale Gazon Tunisie s'achète en pack avec votre gazon naturel, à 100 DT/m³. Packs 10, 15 ou 20 cm pour 50 m² de gazon, livrés en Tunisie.",
     eyebrow: "Terre végétale",
     h1: "Terre végétale : en pack avec votre gazon naturel",
@@ -54,7 +54,7 @@ const TEXT = {
     otherH2: "Pour une autre surface que 50 m²",
     otherPa: [
       "Le volume de terre se calcule simplement : surface à couvrir multipliée par l'épaisseur souhaitée. Pour 80 m² en 15 cm, comptez par exemple 80 × 0,15 = 12 m³ de terre végétale.",
-      "Le gazon, lui, suit son tarif dégressif : 15 DT/m² en dessous de 50 m², 9 DT/m² à partir de 50 m². Indiquez-nous votre surface et l'épaisseur souhaitée par WhatsApp, nous vous établissons le devis complet.",
+      "Le gazon est proposé sur devis sous 50 m² et à partir de 9 DT/m² dès 50 m². Indiquez-nous votre surface et l'épaisseur souhaitée par WhatsApp, nous vous établissons le devis complet.",
     ],
     whatH2: "Qu'est-ce que la terre végétale et pourquoi l'ajouter sous un gazon ?",
     whatPa: [
@@ -94,7 +94,7 @@ const TEXT = {
     otherH2: "For an area other than 50 sqm",
     otherPa: [
       "The soil volume is a simple calculation: the area to cover multiplied by the depth you want. For 80 sqm at 15 cm, that is 80 × 0.15 = 12 m³ of topsoil.",
-      "The lawn follows its tapering rate: 15 DT/sqm below 50 sqm, 9 DT/sqm from 50 sqm. Send us your area and the depth you want on WhatsApp and we will put together the full quote.",
+      "The lawn is quoted under 50 sqm and starts at 9 DT/sqm from 50 sqm. Send us your area and the depth you want on WhatsApp and we will put together the full quote.",
     ],
     whatH2: "What is topsoil and why add it under a lawn?",
     whatPa: [
@@ -134,7 +134,7 @@ const TEXT = {
     otherH2: "لمساحة غير 50 م²",
     otherPa: [
       "يُحسب حجم التربة ببساطة: المساحة المطلوب تغطيتها مضروبة في السمك المرغوب. فلـ 80 م² بسمك 15 سم، احسبوا 80 × 0.15 = 12 م³ من التربة الزراعية.",
-      "أما العشب فيتبع تعريفته المتناقصة: 15 دينار/م² دون 50 م²، و9 دينار/م² ابتداءً من 50 م². أرسلوا لنا مساحتكم والسمك المرغوب عبر واتساب، ونُعدّ لكم عرض السعر الكامل.",
+      "أما العشب فيُحتسب حسب عرض السعر دون 50 م²، ويبدأ من 9 دنانير/م² ابتداءً من 50 م². أرسلوا لنا مساحتكم والسمك المرغوب عبر واتساب، ونُعدّ لكم عرض السعر الكامل.",
     ],
     whatH2: "ما هي التربة الزراعية ولماذا تُضاف تحت العشب؟",
     whatPa: [

@@ -48,13 +48,23 @@ function localBusiness({ areaServed } = {}) {
       absoluteUrl("/palmier-classique.jpeg"),
     ],
     telephone: SITE.phoneE164,
+    email: SITE.email,
     priceRange: "9 DT - 500 DT",
+    currenciesAccepted: "TND",
+    paymentAccepted: "Acompte à la confirmation, solde à la livraison ou après la pose",
     address: {
       "@type": "PostalAddress",
       addressLocality: SITE.address.locality,
       addressRegion: SITE.address.region,
       streetAddress: SITE.address.streetAddress,
       addressCountry: SITE.address.country,
+    },
+    hasMap: SITE.social.googleMaps,
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: SITE.phoneE164,
+      contactType: "sales",
+      availableLanguage: ["French", "Arabic", "English"],
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -86,6 +96,20 @@ function website(lang = "fr-TN") {
     name: SITE.name,
     inLanguage: lang,
     publisher: { "@id": `${SITE.domain}/#organization` },
+  };
+}
+
+function webPage({ path, name, description, lang = "fr-TN" }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${absoluteUrl(path)}#webpage`,
+    url: absoluteUrl(path),
+    name,
+    description,
+    inLanguage: lang,
+    isPartOf: { "@id": `${SITE.domain}/#website` },
+    about: { "@id": `${SITE.domain}/#localbusiness` },
   };
 }
 
@@ -193,6 +217,7 @@ module.exports = {
   organization,
   localBusiness,
   website,
+  webPage,
   breadcrumbList,
   product,
   service,

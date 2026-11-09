@@ -5,7 +5,7 @@
 // Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
 // contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
-const ASSET_VERSION = "22";
+const ASSET_VERSION = "23";
 
 // Le tarif du gazon vient de src/data/pricing.js, source unique de vérité :
 // aucun prix de gazon ne doit être écrit en dur ailleurs.
@@ -99,6 +99,14 @@ const SITE = {
       priceLabel: "500 DT / m",
       deliveryNote: "Livraison calculée selon votre adresse, communiquée avant confirmation de commande.",
       image: "/palmier-classique.jpeg",
+    },
+    // Proposée uniquement en complément d'une commande de gazon.
+    terreVegetale: {
+      name: "Terre végétale en complément du gazon",
+      price: 100,
+      currency: "TND",
+      unit: "m³",
+      image: "/gazon.jpg",
     },
   },
 

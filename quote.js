@@ -30,6 +30,7 @@
 
   function render() {
     var brut = form.elements.surface.value.trim();
+    var city = form.elements.city ? form.elements.city.value.trim() : "";
     var epaisseur = form.elements.terre.value;
     var typeSelect = form.elements.type;
     var typeLabel = typeSelect.options[typeSelect.selectedIndex].text;
@@ -47,6 +48,7 @@
     ctaEl.href = waUrl(
       fill(epaisseur ? L.message : L.messageNoTerre, {
         surface: brut,
+        city: city || "à préciser",
         type: typeLabel,
         service: serviceLabel,
         terre: epaisseur

@@ -147,6 +147,10 @@ function renderQuote({ h2, intro, config }) {
           <input type="number" name="surface" min="1" step="1" inputmode="numeric" placeholder="50" />
         </label>
         <label class="quote-field">
+          <span>${config.labels.city}</span>
+          <input type="text" name="city" autocomplete="address-level2" placeholder="${config.labels.cityPlaceholder}" />
+        </label>
+        <label class="quote-field">
           <span>${config.labels.type}</span>
           <select name="type">
             ${config.types.map((t) => `<option value="${t.key}">${t.label}</option>`).join("")}

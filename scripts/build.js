@@ -149,6 +149,7 @@ function buildForLanguage(lang) {
   require("../src/pages/gazon-cluster").build(registerPage, lang);
   require("../src/pages/palmier-cluster").build(registerPage, lang);
   require("../src/pages/produits").build(registerPage, lang);
+  require("../src/pages/terre-vegetale").build(registerPage, lang);
   require("../src/pages/services").build(registerPage, lang);
   require("../src/pages/livraison").build(registerPage, lang);
   require("../src/pages/trust").build(registerPage, lang);

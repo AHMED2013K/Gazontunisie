@@ -545,6 +545,12 @@ function acheterGazonPage(lang) {
     sections: [
       { type: "list", h2: t.h2a, ordered: true, items: t.listA },
       { type: "table", h2: t.h2b, headers: t.headersB, rows: t.rowsB },
+      {
+        type: "quote",
+        h2: lang === "fr" ? "Recevez votre devis de livraison" : lang === "en" ? "Get your delivery quote" : "احصلوا على عرض سعر التوصيل",
+        intro: lang === "fr" ? "Indiquez la surface, la ville et le mode de commande : votre message WhatsApp sera prérempli avec les informations utiles." : lang === "en" ? "Enter your area, city and order option: your WhatsApp message will be prefilled with the useful details." : "أدخلوا المساحة والمدينة وطريقة الطلب: ستُجهّز رسالة واتساب بالمعلومات المفيدة.",
+        config: quoteConfig(lang),
+      },
       { type: "cta", ...gazonCta(lang) },
       { type: "related", ...relatedCluster(lang) },
       { type: "faq", h2: t.faqH2, items: t.faq.map(([q, a]) => ({ q, a })) },
